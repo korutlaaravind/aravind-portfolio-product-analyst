@@ -1,0 +1,381 @@
+/* 109ichiki.com Inspired Layout - Data Analyst Portfolio */
+
+/* Base Layout Styles */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-5xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section - 109ichiki.com Style */
+.hero-ichiki {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, 
+    var(--color-bg-primary) 0%, 
+    rgba(0, 123, 255, 0.05) 50%, 
+    var(--color-bg-secondary) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-ichiki::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 40%, rgba(0, 123, 255, 0.05) 50%, transparent 60%);
+  animation: var(--animation-float);
+}
+
+.hero-content-ichiki {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text-ichiki {
+  animation: fade-in-up 1s ease-out;
+}
+
+.hero-label {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: var(--border-radius-full);
+  display: inline-block;
+}
+
+.hero-title-ichiki {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-family-heading);
+  line-height: 0.9;
+  margin-bottom: var(--space-lg);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle-ichiki {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  line-height: 1.4;
+}
+
+/* About Content Layout */
+.about-content-ichiki {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4xl);
+  align-items: start;
+  margin-top: var(--space-3xl);
+}
+
+.about-text-ichiki h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.about-text-ichiki h3:first-child {
+  margin-top: 0;
+}
+
+.about-text-ichiki p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+/* Works Grid - 109ichiki.com Style */
+.works-grid-ichiki {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+}
+
+/* Skills Categories - Fixed Layout */
+.skills-categories-ichiki {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+  margin-top: var(--space-3xl);
+}
+
+.skill-category-ichiki {
+  text-align: left;
+}
+
+.category-title-ichiki {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.category-title-ichiki::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-sm);
+}
+
+.skills-grid-ichiki {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-lg);
+  justify-items: stretch;
+}
+
+/* Experience Timeline - Fixed Layout (Single consistent style) */
+.experience-timeline-ichiki {
+  position: relative;
+  margin-top: var(--space-3xl);
+  padding-left: var(--space-2xl);
+}
+
+.experience-timeline-ichiki::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-primary);
+}
+
+.timeline-item-ichiki {
+  position: relative;
+  margin-bottom: var(--space-4xl);
+  margin-left: var(--space-2xl);
+}
+
+.timeline-item-ichiki::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  z-index: 2;
+}
+
+.timeline-date-ichiki {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  background: rgba(0, 123, 255, 0.1);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius-full);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-content-ichiki {
+  background: var(--color-bg-primary);
+  padding: var(--space-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  border-left: 4px solid var(--color-primary);
+}
+
+.timeline-content-ichiki:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.timeline-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-company {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.timeline-achievements {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.timeline-achievements li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-achievements li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.timeline-skills span {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Contact Content Layout */
+.contact-content-ichiki {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  margin-top: var(--space-3xl);
+}
+
+/* Floating Elements - 109ichiki.com Style */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  opacity: 0.1;
+  animation: var(--animation-float);
+  pointer-events: none;
+}
+
+.floating-element:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content-ichiki {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+  
+  .about-content-ichiki {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  
+  .contact-content-ichiki {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title-ichiki {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .works-grid-ichiki {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid-ichiki {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .experience-timeline-ichiki::before {
+    left: 20px;
+  }
+  
+  .timeline-item-ichiki {
+    margin-left: 50px;
+  }
+  
+  .timeline-item-ichiki::before {
+    left: -45px;
+  }
+  
+  .experience-timeline-ichiki {
+    padding-left: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid-ichiki {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .timeline-content-ichiki {
+    padding: var(--space-md);
+  }
+}

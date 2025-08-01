@@ -1,0 +1,13 @@
+{
+  "name": "aravind-portfolio-109ichiki-style",
+  "version": "1.0.0",
+  "description": "A portfolio website inspired by 109ichiki.com Japanese design aesthetics",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx live-server ."
+  },
+  "keywords": ["portfolio", "japanese-design", "gsap", "animations"],
+  "author": "Aravind Kumar",
+  "license": "MIT"
+}
